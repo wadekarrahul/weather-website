@@ -9,7 +9,7 @@ const weather = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location, please change the search term!')
         } else {
-            callback(undefined, 'It is currently ' + body.current.temperature + ' degrees, but feels like ' + body.current.feelslike + ' degrees')
+            callback(undefined, 'It is currently ' + body.current.temperature + ' degrees, but feels like ' + body.current.feelslike + ' degrees and humidity is ' + body.current.humidity + '%')
         }
     })
 }
